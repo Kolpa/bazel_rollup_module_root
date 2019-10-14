@@ -1,0 +1,21 @@
+{
+    "name": "ts_rollup",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@bazel/bazel": "latest",
+        "@bazel/buildifier": "latest",
+        "@bazel/ibazel": "latest",
+        "@bazel/rollup": "latest",
+        "@bazel/typescript": "latest",
+        "rollup": "^1.23.1",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "typescript": "~3.4.0"
+    },
+    "scripts": {
+        "build": "bazel build //...",
+        "bazel": "bazel",
+        "test": "bazel test //..."
+    }
+}
