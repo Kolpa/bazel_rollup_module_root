@@ -7,7 +7,8 @@ ts_library(
     name = "app",
     srcs = glob(["*.ts"]),
     deps = [
-      "//lib"
+      "//lib",
+      "//lib_root:lib"
     ],
     tsconfig = "//:tsconfig.json"
 )
@@ -16,5 +17,5 @@ rollup_bundle(
     name = "bundle",
     config_file = "rollup.config.js",
     entry_point = "index.ts",
-    deps = [":app", "//lib"]
+    deps = [":app", "//lib", "//lib_root:lib"]
 )
